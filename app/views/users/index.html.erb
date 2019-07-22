@@ -1,0 +1,9 @@
+<%@users.each do |user|%>
+<% if user_signed_in?%>
+<h1>Welcome, <%=user.email%></h1>
+<%else%>
+<h1>Welcome!</h1>
+<%end%>
+<%end%>
+
+<%= link_to "Create a new note", new_note_path%>

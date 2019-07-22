@@ -31,8 +31,8 @@ feature 'User edit', :devise do
   #   When I try to edit another user's profile
   #   Then I see my own 'edit profile' page
   scenario "user cannot cannot edit another user's profile", :me do
-    me = FactoryGirl.create(:user)
-    other = FactoryGirl.create(:user, email: 'other@example.com')
+    me = FactoryBot.create(:user)
+    other = FactoryBot.create(:user, email: 'other@example.com')
     login_as(me, :scope => :user)
     visit edit_user_registration_path(other)
     expect(page).to have_content 'Edit User'

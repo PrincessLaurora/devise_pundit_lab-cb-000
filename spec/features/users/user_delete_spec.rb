@@ -25,4 +25,4 @@ Warden.test_mode!
     #expect(page).to have_content I18n.t 'devise.registrations.destroyed'
   #end
 
-end
+#end

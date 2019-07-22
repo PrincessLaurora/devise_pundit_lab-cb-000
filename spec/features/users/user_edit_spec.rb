@@ -16,7 +16,7 @@ feature 'User edit', :devise do
   #   When I change my email address
   #   Then I see an account updated message
   scenario 'user changes email address' do
-    user = FactoryGirl.create(:user)
+    user = FactoryBot.create(:user)
     login_as(user, :scope => :user)
     visit edit_user_registration_path(user)
     fill_in 'Email', :with => 'newemail@example.com'
